@@ -20,4 +20,4 @@ class MenuList(generic.ListView):
 class MenuItemDetail(generic.DetailView):
 
     model = Items
-    template_name = "menu_item_detail.html"
+    template_name = "menu_item_list.html"

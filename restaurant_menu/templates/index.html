@@ -11,10 +11,10 @@
                 {% for row in items_list %}
                     {% if row.meals_type == meal.0 %}
                         {% if row.status == 0 %}
-                            <h3> <del> {{ row.meals }} </del> </h3>
+                            <a href="{% url 'menu_item' row.pk %}"> <h3> <del> {{ row.meals }} </del> </h3> </a>
                             <p> {{ row.meals_description }}</p>
                         {% else %}
-                            <h3> {{ row.meals }}</h3>
+                            <a href="{% url 'menu_item' row.pk %}"> <h3> {{ row.meals }}</h3> </a>
                             <p> {{ row.meals_description }}</p>
                         {% endif %}
                     {% endif %}
