@@ -5,6 +5,13 @@
     <title>Home</title>
 </head>
 <body>
-  <h1> Restaurant Menu </h1>
+    <h1> Restaurant Menu </h1>
+        {% for meal in meals %}
+        <h2> {{ meal.1 }} </h2>
+        {% for row in items_list %}
+        <h3> {{ row.meals }}</h3>
+        <p> {{ row.meals_description }}</p>
+        {% endfor %}
+        {% endfor %}
 </body>
 </html>
