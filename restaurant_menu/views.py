@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 from django.views import generic
 from .models import Items, MEAL_TYPE
+from django.views.generic import TemplateView
 
 class MenuList(generic.ListView):
 
@@ -21,3 +22,7 @@ class MenuItemDetail(generic.DetailView):
 
     model = Items
     template_name = "menu_item_list.html"
+
+class About(TemplateView):
+
+    template_name = "about.html"
